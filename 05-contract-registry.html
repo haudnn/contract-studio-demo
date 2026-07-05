@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danh sách hợp đồng — Contract Studio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a.active { color:#1a6b54; font-weight:600; border-bottom:2px solid #1a6b54; padding-bottom:2px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#e7f4ea; border:1px solid #bfdcc8; border-radius:14px; padding:4px 12px; color:#20693a; }
+  main { max-width:1020px; margin:28px auto; padding:0 20px; }
+  .breadcrumb { font-size:13px; color:#888; margin-bottom:10px; }
+  .breadcrumb a { color:#1a6b54; text-decoration:none; }
+  .page-head { display:flex; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px; }
+  h1 { font-size:24px; }
+  .actions { margin-left:auto; }
+  .btn { display:inline-block; text-decoration:none; padding:9px 16px; border-radius:6px; font-size:14px; background:#1a6b54; color:#fff; }
+  .filters { display:flex; gap:10px; margin-bottom:14px; }
+  .filters input, .filters select { padding:8px 12px; border:1px solid #ccc; border-radius:6px; font-size:13.5px; font-family:inherit; background:#fff; color:#2b2b2b; }
+  .filters input { flex:1; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #ddd; border-radius:8px; overflow:hidden; font-size:14px; }
+  th { text-align:left; background:#fafaf8; border-bottom:1px solid #ddd; padding:10px 14px; font-size:13px; color:#666; }
+  td { padding:12px 14px; border-bottom:1px solid #eee; }
+  tr:last-child td { border-bottom:none; }
+  tr.new-row td { background:#f2faf6; }
+  .status { font-size:12px; padding:2px 10px; border-radius:10px; font-weight:600; }
+  .status.done { background:#dcfce7; color:#166534; }
+  .status.draft { background:#f1f5f9; color:#64748b; }
+  .row-actions a { font-size:13px; color:#1a6b54; text-decoration:none; margin-right:10px; white-space:nowrap; }
+  .hint { margin-top:18px; font-size:13px; color:#777; background:#fff; border:1px dashed #ccc; border-radius:8px; padding:12px 16px; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — chưa phải sản phẩm thật</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a href="01-template-list.html">Mẫu hợp đồng</a>
+    <a class="active" href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Quốc Bảo · Nhân viên kinh doanh</div>
+</header>
+<main>
+  <div class="breadcrumb"><a href="index.html">← Về trang giới thiệu</a></div>
+  <div class="page-head">
+    <h1>Danh sách hợp đồng</h1>
+    <div class="actions"><a class="btn" href="03-contract-fill-form.html">+ Tạo hợp đồng mới</a></div>
+  </div>
+  <div class="filters">
+    <input type="text" placeholder="🔍 Tìm theo tên hợp đồng, tên Bên B…">
+    <select><option>Mọi mẫu</option><option>Hợp đồng dịch vụ phần mềm</option><option>NDA</option></select>
+    <select><option>Mọi trạng thái</option><option>Hoàn tất</option><option>Nháp</option></select>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Tên hợp đồng</th><th>Mẫu gốc</th><th>Người tạo</th><th>Ngày tạo</th><th>Trạng thái</th><th>Hành động</th></tr>
+    </thead>
+    <tbody>
+      <tr class="new-row">
+        <td><strong>HĐDV — Công ty CP Thương mại An Phát</strong></td>
+        <td>Hợp đồng dịch vụ phần mềm</td>
+        <td>Quốc Bảo</td>
+        <td>05/07/2026</td>
+        <td><span class="status done">Hoàn tất</span></td>
+        <td class="row-actions"><a href="04-preview-export.html">Xem</a><a href="03-contract-fill-form.html">Sửa</a><a href="#">Xuất lại</a><a href="#">Nhân bản</a></td>
+      </tr>
+      <tr>
+        <td><strong>HĐDV — Công ty TNHH Kiến Hưng</strong></td>
+        <td>Hợp đồng dịch vụ phần mềm</td>
+        <td>Quốc Bảo</td>
+        <td>01/07/2026</td>
+        <td><span class="status draft">Nháp</span></td>
+        <td class="row-actions"><a href="#">Xem</a><a href="#">Sửa</a><a href="#">Xuất lại</a><a href="#">Nhân bản</a></td>
+      </tr>
+      <tr>
+        <td><strong>NDA — Công ty CP Đầu tư Hoà Bình</strong></td>
+        <td>Thoả thuận bảo mật thông tin (NDA)</td>
+        <td>Ngọc Lan</td>
+        <td>26/06/2026</td>
+        <td><span class="status done">Hoàn tất</span></td>
+        <td class="row-actions"><a href="#">Xem</a><a href="#">Sửa</a><a href="#">Xuất lại</a><a href="#">Nhân bản</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="hint">💡 Hợp đồng được lưu dưới dạng dữ liệu đã điền — có thể sửa và xuất lại file Word/PDF bất cứ lúc nào, không lo thất lạc file trong máy cá nhân. "Nhân bản" giúp tạo nhanh hợp đồng tương tự cho khách khác.</p>
+</main>
+</body>
+</html>

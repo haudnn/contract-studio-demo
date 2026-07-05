@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhập mẫu bằng AI — Contract Studio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a.active { color:#1a6b54; font-weight:600; border-bottom:2px solid #1a6b54; padding-bottom:2px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#e4eefc; border:1px solid #b9d0ee; border-radius:14px; padding:4px 12px; color:#1c4f8a; }
+  main { max-width:1180px; margin:24px auto; padding:0 20px; }
+  .breadcrumb { font-size:13px; color:#888; margin-bottom:10px; }
+  .breadcrumb a { color:#1a6b54; text-decoration:none; }
+  .page-head { display:flex; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:12px; }
+  h1 { font-size:22px; }
+  .ai-note { font-size:13px; color:#6b2fa8; background:#f3e8fd; border-radius:6px; padding:6px 12px; margin-bottom:16px; display:inline-block; }
+  .cols { display:grid; grid-template-columns:1.2fr 1fr; gap:20px; align-items:start; }
+  @media (max-width:860px){ .cols { grid-template-columns:1fr; } }
+  .doc-pane { background:#fff; border:1px solid #ddd; border-radius:8px; padding:28px 32px; font-family:Georgia,"Times New Roman",serif; font-size:14.5px; }
+  .doc-pane h2 { text-align:center; font-size:16px; margin-bottom:4px; }
+  .doc-pane .doc-sub { text-align:center; font-size:13px; color:#666; margin-bottom:16px; }
+  .doc-pane p { margin-bottom:10px; }
+  mark { padding:1px 4px; border-radius:3px; font-family:inherit; }
+  mark.t-text { background:#dbeafe; }
+  mark.t-date { background:#dcfce7; }
+  mark.t-money { background:#fef3c7; }
+  mark.t-select { background:#fce7f3; }
+  .legend { font-size:12px; color:#666; margin-top:14px; border-top:1px dashed #ccc; padding-top:10px; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+  .legend mark { margin-right:8px; }
+  .field-pane { background:#fff; border:1px solid #ddd; border-radius:8px; }
+  .field-pane .pane-head { padding:14px 16px; border-bottom:1px solid #eee; display:flex; align-items:center; }
+  .pane-head strong { font-size:15px; }
+  .pane-head .count { margin-left:auto; font-size:12px; color:#666; }
+  .field { padding:12px 16px; border-bottom:1px solid #f0f0f0; }
+  .field:last-of-type { border-bottom:none; }
+  .field-row1 { display:flex; align-items:center; gap:8px; }
+  .field-name { font-weight:600; font-size:14px; }
+  .type { font-size:12px; padding:1px 8px; border-radius:8px; }
+  .type.text { background:#dbeafe; color:#1e40af; }
+  .type.date { background:#dcfce7; color:#166534; }
+  .type.money { background:#fef3c7; color:#92400e; }
+  .type.select { background:#fce7f3; color:#9d174d; }
+  .req-toggle { margin-left:auto; font-size:12px; display:flex; border:1px solid #ccc; border-radius:12px; overflow:hidden; }
+  .req-toggle span { padding:2px 10px; color:#888; }
+  .req-toggle span.on { background:#1a6b54; color:#fff; }
+  .field-row2 { font-size:12px; color:#888; margin-top:4px; display:flex; gap:12px; }
+  .field-row2 a { color:#1a6b54; text-decoration:none; }
+  .fix-note { font-size:12px; color:#b45309; background:#fffbeb; border:1px solid #fde68a; border-radius:6px; padding:6px 10px; margin-top:6px; }
+  .pane-foot { padding:14px 16px; border-top:1px solid #eee; display:flex; gap:10px; align-items:center; }
+  .btn { display:inline-block; text-decoration:none; padding:9px 16px; border-radius:6px; font-size:14px; border:1px solid transparent; }
+  .btn-primary { background:#1a6b54; color:#fff; }
+  .btn-ghost { background:#fff; color:#555; border-color:#ccc; }
+  .add-field { font-size:13px; color:#1a6b54; text-decoration:none; margin-left:auto; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — kết quả AI bên dưới là dữ liệu giả lập</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a class="active" href="01-template-list.html">Mẫu hợp đồng</a>
+    <a href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Ngọc Lan · Quản trị viên</div>
+</header>
+<main>
+  <div class="breadcrumb"><a href="01-template-list.html">← Mẫu hợp đồng</a> / Nhập mẫu bằng AI</div>
+  <div class="page-head"><h1>Duyệt kết quả AI — hop-dong-dich-vu-phan-mem.docx</h1></div>
+  <div class="ai-note">🤖 AI đã phát hiện <strong>8 trường thông tin</strong>. Anh/chị kiểm tra, chỉnh sửa rồi bấm "Lưu thành mẫu" — AI chỉ đề xuất, quyết định cuối cùng là của anh/chị.</div>
+  <div class="cols">
+    <div class="doc-pane">
+      <h2>HỢP ĐỒNG DỊCH VỤ PHẦN MỀM</h2>
+      <p class="doc-sub">Số: 05/2026/HĐDV</p>
+      <p>Hôm nay, ngày <mark class="t-date">15/06/2026</mark>, tại Thành phố Hồ Chí Minh, chúng tôi gồm:</p>
+      <p><strong>BÊN A (Bên cung cấp):</strong> <mark class="t-text">Công ty TNHH Giải pháp Băng Tuyết</mark><br>
+      Mã số thuế: <mark class="t-text">0312456789</mark><br>
+      Đại diện: <mark class="t-text">Ông Trần Văn Minh</mark> — Chức vụ: Giám đốc</p>
+      <p><strong>BÊN B (Bên sử dụng):</strong> <mark class="t-text">Công ty CP Thương mại An Phát</mark></p>
+      <p><strong>Điều 1. Nội dung dịch vụ:</strong> Bên A cung cấp cho Bên B dịch vụ phát triển và bảo trì phần mềm quản lý bán hàng theo yêu cầu.</p>
+      <p><strong>Điều 2. Giá trị hợp đồng:</strong> Tổng giá trị hợp đồng là <mark class="t-money">250.000.000 VNĐ</mark> (đã bao gồm thuế GTGT).</p>
+      <p><strong>Điều 3. Thời hạn:</strong> Hợp đồng có hiệu lực <mark class="t-select">12 tháng</mark> kể từ ngày ký.</p>
+      <p><strong>Điều 4. Điều khoản khác:</strong> <mark class="t-text">Thanh toán chia 2 đợt theo tiến độ nghiệm thu.</mark></p>
+      <div class="legend">
+        Chú thích màu: <mark class="t-text">Chữ</mark> <mark class="t-date">Ngày</mark> <mark class="t-money">Số tiền</mark> <mark class="t-select">Danh sách chọn</mark>
+      </div>
+    </div>
+    <div class="field-pane">
+      <div class="pane-head"><strong>Trường thông tin AI đề xuất</strong><span class="count">8 trường · 6 bắt buộc</span></div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Ngày ký</span><span class="type date">Ngày</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Tên Bên A</span><span class="type text">Chữ</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Mã số thuế Bên A</span><span class="type text">Chữ</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Đại diện Bên A</span><span class="type text">Chữ</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Tên Bên B</span><span class="type text">Chữ</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Giá trị hợp đồng</span><span class="type money">Số tiền</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="fix-note">✎ AI ban đầu nhận là "Chữ" — quản trị viên đã sửa thành <strong>Số tiền</strong>. Đây là lý do luôn có bước con người duyệt.</div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Thời hạn hợp đồng</span><span class="type select">Danh sách chọn</span>
+          <span class="req-toggle"><span class="on">Bắt buộc</span><span>Tuỳ chọn</span></span></div>
+        <div class="field-row2">Lựa chọn: 6 tháng / 12 tháng / 24 tháng · <a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="field">
+        <div class="field-row1"><span class="field-name">Ghi chú thanh toán</span><span class="type text">Chữ</span>
+          <span class="req-toggle"><span>Bắt buộc</span><span class="on">Tuỳ chọn</span></span></div>
+        <div class="field-row2"><a href="#">Sửa</a><a href="#">Xoá</a></div>
+      </div>
+      <div class="pane-foot">
+        <a class="btn btn-primary" href="01-template-list.html">✓ Lưu thành mẫu</a>
+        <a class="btn btn-ghost" href="01-template-list.html">Huỷ</a>
+        <a class="add-field" href="#">+ Thêm trường thủ công</a>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

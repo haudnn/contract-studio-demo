@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tạo hợp đồng — Contract Studio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a.active { color:#1a6b54; font-weight:600; border-bottom:2px solid #1a6b54; padding-bottom:2px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#e7f4ea; border:1px solid #bfdcc8; border-radius:14px; padding:4px 12px; color:#20693a; }
+  main { max-width:680px; margin:28px auto; padding:0 20px; }
+  .breadcrumb { font-size:13px; color:#888; margin-bottom:10px; }
+  .breadcrumb a { color:#1a6b54; text-decoration:none; }
+  h1 { font-size:22px; margin-bottom:2px; }
+  .template-ref { font-size:13px; color:#666; margin-bottom:18px; }
+  form { background:#fff; border:1px solid #ddd; border-radius:8px; padding:24px; }
+  .form-group { margin-bottom:16px; }
+  label { display:block; font-size:14px; font-weight:600; margin-bottom:4px; }
+  .req { color:#c0392b; }
+  .opt { color:#999; font-weight:400; font-size:12px; }
+  input, select, textarea { width:100%; padding:9px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; font-family:inherit; background:#fff; color:#2b2b2b; }
+  .error input { border-color:#c0392b; background:#fdf3f2; }
+  .error-msg { font-size:12.5px; color:#c0392b; margin-top:3px; }
+  .form-foot { display:flex; gap:10px; align-items:center; margin-top:22px; border-top:1px solid #eee; padding-top:18px; }
+  .btn { display:inline-block; text-decoration:none; padding:10px 18px; border-radius:6px; font-size:14px; border:1px solid transparent; }
+  .btn-primary { background:#1a6b54; color:#fff; }
+  .btn-ghost { background:#fff; color:#555; border-color:#ccc; }
+  .progress-hint { margin-left:auto; font-size:12.5px; color:#888; }
+  .warn-box { font-size:13px; color:#7a5c00; background:#fffbeb; border:1px solid #fde68a; border-radius:6px; padding:8px 12px; margin-bottom:18px; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — chưa phải sản phẩm thật</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a href="01-template-list.html">Mẫu hợp đồng</a>
+    <a class="active" href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Quốc Bảo · Nhân viên kinh doanh</div>
+</header>
+<main>
+  <div class="breadcrumb"><a href="01-template-list.html">← Mẫu hợp đồng</a> / Tạo hợp đồng mới</div>
+  <h1>Tạo hợp đồng</h1>
+  <p class="template-ref">Từ mẫu: <strong>Hợp đồng dịch vụ phần mềm</strong> · 8 trường (6 bắt buộc)</p>
+  <div class="warn-box">Trường có dấu <span class="req">*</span> là <strong>Bắt buộc</strong> — không thể xuất file khi còn thiếu. Biểu mẫu này được sinh tự động từ mẫu do Quản trị viên cấu hình.</div>
+  <form>
+    <div class="form-group">
+      <label>Ngày ký <span class="req">*</span></label>
+      <input type="text" value="05/07/2026">
+    </div>
+    <div class="form-group">
+      <label>Tên Bên A <span class="req">*</span></label>
+      <input type="text" value="Công ty TNHH Giải pháp Băng Tuyết">
+    </div>
+    <div class="form-group">
+      <label>Mã số thuế Bên A <span class="req">*</span></label>
+      <input type="text" value="0312456789">
+    </div>
+    <div class="form-group">
+      <label>Đại diện Bên A <span class="req">*</span></label>
+      <input type="text" value="Ông Trần Văn Minh">
+    </div>
+    <div class="form-group error">
+      <label>Tên Bên B <span class="req">*</span></label>
+      <input type="text" value="" placeholder="Nhập tên công ty Bên B">
+      <div class="error-msg">⚠ Trường bắt buộc — vui lòng điền trước khi xem trước / xuất file.</div>
+    </div>
+    <div class="form-group">
+      <label>Giá trị hợp đồng (VNĐ) <span class="req">*</span></label>
+      <input type="text" value="250.000.000">
+    </div>
+    <div class="form-group">
+      <label>Thời hạn hợp đồng <span class="req">*</span></label>
+      <select>
+        <option>6 tháng</option>
+        <option selected>12 tháng</option>
+        <option>24 tháng</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Ghi chú thanh toán <span class="opt">(Tuỳ chọn)</span></label>
+      <textarea rows="2">Thanh toán chia 2 đợt theo tiến độ nghiệm thu.</textarea>
+    </div>
+    <div class="form-foot">
+      <a class="btn btn-primary" href="04-preview-export.html">Xem trước →</a>
+      <a class="btn btn-ghost" href="05-contract-registry.html">Lưu nháp</a>
+      <span class="progress-hint">Đã điền 7/8 trường · còn 1 trường bắt buộc</span>
+    </div>
+  </form>
+</main>
+</body>
+</html>

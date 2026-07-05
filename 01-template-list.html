@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mẫu hợp đồng — Contract Studio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a.active { color:#1a6b54; font-weight:600; border-bottom:2px solid #1a6b54; padding-bottom:2px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#e4eefc; border:1px solid #b9d0ee; border-radius:14px; padding:4px 12px; color:#1c4f8a; }
+  main { max-width:960px; margin:28px auto; padding:0 20px; }
+  .page-head { display:flex; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
+  h1 { font-size:24px; }
+  .actions { margin-left:auto; display:flex; gap:10px; }
+  .btn { display:inline-block; text-decoration:none; padding:9px 16px; border-radius:6px; font-size:14px; border:1px solid transparent; }
+  .btn-primary { background:#1a6b54; color:#fff; }
+  .btn-secondary { background:#fff; color:#1a6b54; border-color:#1a6b54; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #ddd; border-radius:8px; overflow:hidden; font-size:14px; }
+  th { text-align:left; background:#fafaf8; border-bottom:1px solid #ddd; padding:10px 14px; font-size:13px; color:#666; }
+  td { padding:12px 14px; border-bottom:1px solid #eee; }
+  tr:last-child td { border-bottom:none; }
+  .tag { font-size:12px; padding:2px 8px; border-radius:10px; }
+  .tag.ai { background:#f3e8fd; color:#6b2fa8; }
+  .tag.manual { background:#eef2ef; color:#555; }
+  .row-actions a { font-size:13px; color:#1a6b54; text-decoration:none; margin-right:10px; }
+  .hint { margin-top:18px; font-size:13px; color:#777; background:#fff; border:1px dashed #ccc; border-radius:8px; padding:12px 16px; }
+  .breadcrumb { font-size:13px; color:#888; margin-bottom:10px; }
+  .breadcrumb a { color:#1a6b54; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — chưa phải sản phẩm thật</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a class="active" href="01-template-list.html">Mẫu hợp đồng</a>
+    <a href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Ngọc Lan · Quản trị viên</div>
+</header>
+<main>
+  <div class="breadcrumb"><a href="index.html">← Về trang giới thiệu</a></div>
+  <div class="page-head">
+    <h1>Mẫu hợp đồng</h1>
+    <div class="actions">
+      <a class="btn btn-primary" href="02-ai-import-review.html">⬆ Nhập mẫu bằng AI</a>
+      <a class="btn btn-secondary" href="#">+ Tạo mẫu mới</a>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Tên mẫu</th><th>Nguồn</th><th>Số trường</th><th>Cập nhật</th><th>Hành động</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Hợp đồng dịch vụ phần mềm</strong></td>
+        <td><span class="tag ai">Nhập bằng AI</span></td>
+        <td>8 trường (6 bắt buộc)</td>
+        <td>02/07/2026</td>
+        <td class="row-actions"><a href="02-ai-import-review.html">Sửa</a><a href="03-contract-fill-form.html">Dùng mẫu</a></td>
+      </tr>
+      <tr>
+        <td><strong>Hợp đồng nguyên tắc mua bán</strong></td>
+        <td><span class="tag manual">Tạo thủ công</span></td>
+        <td>11 trường (9 bắt buộc)</td>
+        <td>28/06/2026</td>
+        <td class="row-actions"><a href="#">Sửa</a><a href="#">Dùng mẫu</a></td>
+      </tr>
+      <tr>
+        <td><strong>Thoả thuận bảo mật thông tin (NDA)</strong></td>
+        <td><span class="tag ai">Nhập bằng AI</span></td>
+        <td>6 trường (5 bắt buộc)</td>
+        <td>20/06/2026</td>
+        <td class="row-actions"><a href="#">Sửa</a><a href="#">Dùng mẫu</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="hint">💡 <strong>Nhập mẫu bằng AI:</strong> tải lên file Word hợp đồng đang dùng — AI sẽ tự phát hiện các Trường thông tin (tên bên, mã số thuế, ngày, số tiền…) để anh/chị duyệt lại. Bấm nút "Nhập mẫu bằng AI" để xem màn hình duyệt.</p>
+</main>
+</body>
+</html>

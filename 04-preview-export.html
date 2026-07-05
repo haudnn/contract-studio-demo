@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xem trước & Xuất file — Contract Studio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  nav a.active { color:#1a6b54; font-weight:600; border-bottom:2px solid #1a6b54; padding-bottom:2px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#e7f4ea; border:1px solid #bfdcc8; border-radius:14px; padding:4px 12px; color:#20693a; }
+  main { max-width:820px; margin:28px auto; padding:0 20px; }
+  .breadcrumb { font-size:13px; color:#888; margin-bottom:10px; }
+  .breadcrumb a { color:#1a6b54; text-decoration:none; }
+  .page-head { display:flex; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px; }
+  h1 { font-size:22px; }
+  .actions { margin-left:auto; display:flex; gap:10px; }
+  .btn { display:inline-block; text-decoration:none; padding:9px 16px; border-radius:6px; font-size:14px; border:1px solid transparent; }
+  .btn-word { background:#1c4f8a; color:#fff; }
+  .btn-pdf { background:#a03030; color:#fff; }
+  .btn-save { background:#fff; color:#1a6b54; border-color:#1a6b54; }
+  .ok-note { font-size:13px; color:#166534; background:#dcfce7; border-radius:6px; padding:6px 12px; margin-bottom:16px; display:inline-block; }
+  .paper { background:#fff; border:1px solid #ddd; border-radius:4px; padding:48px 56px; font-family:Georgia,"Times New Roman",serif; font-size:15px; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+  .paper h2 { text-align:center; font-size:17px; margin-bottom:4px; }
+  .paper .doc-sub { text-align:center; font-size:13px; color:#666; margin-bottom:20px; }
+  .paper p { margin-bottom:12px; }
+  .filled { background:#eafaf3; border-bottom:1px solid #8fd3b6; font-weight:600; padding:0 3px; }
+  .sig-row { display:flex; margin-top:36px; }
+  .sig { flex:1; text-align:center; font-size:14px; }
+  .sig .sig-title { font-weight:700; }
+  .sig .sig-hint { color:#999; font-size:12px; margin-top:38px; }
+  .foot-note { margin-top:16px; font-size:13px; color:#777; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — nút xuất file chưa tạo file thật</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a href="01-template-list.html">Mẫu hợp đồng</a>
+    <a class="active" href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Quốc Bảo · Nhân viên kinh doanh</div>
+</header>
+<main>
+  <div class="breadcrumb"><a href="03-contract-fill-form.html">← Quay lại chỉnh sửa</a> / Xem trước</div>
+  <div class="page-head">
+    <h1>Xem trước hợp đồng</h1>
+    <div class="actions">
+      <a class="btn btn-word" href="05-contract-registry.html">⬇ Xuất Word</a>
+      <a class="btn btn-pdf" href="05-contract-registry.html">⬇ Xuất PDF</a>
+      <a class="btn btn-save" href="05-contract-registry.html">Lưu</a>
+    </div>
+  </div>
+  <div class="ok-note">✓ Đã điền đủ 8/8 trường (6 bắt buộc) — sẵn sàng xuất file. Phần tô sáng là thông tin anh/chị vừa điền.</div>
+  <div class="paper">
+    <h2>HỢP ĐỒNG DỊCH VỤ PHẦN MỀM</h2>
+    <p class="doc-sub">Số: 07/2026/HĐDV</p>
+    <p>Hôm nay, ngày <span class="filled">05/07/2026</span>, tại Thành phố Hồ Chí Minh, chúng tôi gồm:</p>
+    <p><strong>BÊN A (Bên cung cấp):</strong> <span class="filled">Công ty TNHH Giải pháp Băng Tuyết</span><br>
+    Mã số thuế: <span class="filled">0312456789</span><br>
+    Đại diện: <span class="filled">Ông Trần Văn Minh</span> — Chức vụ: Giám đốc</p>
+    <p><strong>BÊN B (Bên sử dụng):</strong> <span class="filled">Công ty CP Thương mại An Phát</span></p>
+    <p><strong>Điều 1. Nội dung dịch vụ:</strong> Bên A cung cấp cho Bên B dịch vụ phát triển và bảo trì phần mềm quản lý bán hàng theo yêu cầu.</p>
+    <p><strong>Điều 2. Giá trị hợp đồng:</strong> Tổng giá trị hợp đồng là <span class="filled">250.000.000 VNĐ</span> (đã bao gồm thuế GTGT).</p>
+    <p><strong>Điều 3. Thời hạn:</strong> Hợp đồng có hiệu lực <span class="filled">12 tháng</span> kể từ ngày ký.</p>
+    <p><strong>Điều 4. Điều khoản khác:</strong> <span class="filled">Thanh toán chia 2 đợt theo tiến độ nghiệm thu.</span></p>
+    <div class="sig-row">
+      <div class="sig"><div class="sig-title">ĐẠI DIỆN BÊN A</div><div class="sig-hint">(Ký, ghi rõ họ tên)</div></div>
+      <div class="sig"><div class="sig-title">ĐẠI DIỆN BÊN B</div><div class="sig-hint">(Ký, ghi rõ họ tên)</div></div>
+    </div>
+  </div>
+  <p class="foot-note">Sau khi xuất hoặc lưu, hợp đồng xuất hiện trong <a href="05-contract-registry.html">Danh sách hợp đồng</a> để xem lại, sửa, xuất lại hoặc nhân bản.</p>
+</main>
+</body>
+</html>

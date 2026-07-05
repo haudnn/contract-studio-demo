@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contract Studio — Bản phác thảo</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#2b2b2b; background:#f5f5f2; line-height:1.6; }
+  .draft-banner { background:#fff3cd; color:#7a5c00; text-align:center; font-size:13px; padding:6px; border-bottom:1px solid #e6d9a8; }
+  header.shell { background:#fff; border-bottom:1px solid #ddd; padding:12px 24px; display:flex; align-items:center; gap:24px; }
+  .logo { font-weight:700; font-size:18px; }
+  .logo span { color:#1a6b54; }
+  nav a { color:#555; text-decoration:none; margin-right:16px; font-size:14px; }
+  .user-chip { margin-left:auto; font-size:13px; background:#eef2ef; border:1px solid #cfd8d1; border-radius:14px; padding:4px 12px; }
+  main { max-width:860px; margin:32px auto; padding:0 20px; }
+  h1 { font-size:26px; margin-bottom:8px; }
+  .subtitle { color:#666; margin-bottom:28px; }
+  .journeys { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:640px){ .journeys { grid-template-columns:1fr; } }
+  .card { background:#fff; border:1px solid #ddd; border-radius:8px; padding:22px; }
+  .card h2 { font-size:18px; margin-bottom:6px; }
+  .role { display:inline-block; font-size:12px; font-weight:600; padding:2px 10px; border-radius:10px; margin-bottom:10px; }
+  .role.admin { background:#e4eefc; color:#1c4f8a; }
+  .role.staff { background:#e7f4ea; color:#20693a; }
+  .card p { font-size:14px; color:#555; margin-bottom:14px; }
+  ol.steps { font-size:14px; color:#444; padding-left:20px; margin-bottom:18px; }
+  ol.steps li { margin-bottom:4px; }
+  .btn { display:inline-block; background:#1a6b54; color:#fff; text-decoration:none; padding:10px 18px; border-radius:6px; font-size:14px; }
+  .note { margin-top:28px; font-size:13px; color:#777; border-top:1px dashed #ccc; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="draft-banner">⚠ Bản phác thảo minh hoạ — chưa phải sản phẩm thật</div>
+<header class="shell">
+  <div class="logo">Contract <span>Studio</span></div>
+  <nav>
+    <a href="01-template-list.html">Mẫu hợp đồng</a>
+    <a href="05-contract-registry.html">Hợp đồng</a>
+  </nav>
+  <div class="user-chip">Khách tham quan</div>
+</header>
+<main>
+  <h1>Contract Studio — đi thử 2 hành trình</h1>
+  <p class="subtitle">Bấm vào từng hành trình bên dưới để trải nghiệm luồng làm việc như người dùng thật.</p>
+  <div class="journeys">
+    <div class="card">
+      <span class="role admin">Quản trị viên</span>
+      <h2>Hành trình 1 — Nhập mẫu bằng AI</h2>
+      <p>Biến hợp đồng Word cũ thành Mẫu hợp đồng dùng lại được, AI tự phát hiện các Trường thông tin.</p>
+      <ol class="steps">
+        <li>Xem danh sách Mẫu hợp đồng</li>
+        <li>Tải lên hợp đồng cũ → duyệt kết quả AI đề xuất</li>
+      </ol>
+      <a class="btn" href="01-template-list.html">Bắt đầu hành trình Quản trị viên →</a>
+    </div>
+    <div class="card">
+      <span class="role staff">Nhân viên</span>
+      <h2>Hành trình 2 — Tạo hợp đồng</h2>
+      <p>Chọn mẫu, điền biểu mẫu 2 phút, xem trước và xuất Word/PDF. Hợp đồng được lưu vào danh sách.</p>
+      <ol class="steps">
+        <li>Chọn Mẫu hợp đồng → điền Trường thông tin</li>
+        <li>Xem trước → Xuất Word/PDF → Danh sách hợp đồng</li>
+      </ol>
+      <a class="btn" href="03-contract-fill-form.html">Bắt đầu hành trình Nhân viên →</a>
+    </div>
+  </div>
+  <p class="note">Mọi dữ liệu trong bản phác thảo (tên công ty, mã số thuế, số tiền…) đều là dữ liệu mẫu. Các nút "Xuất Word/PDF" chỉ minh hoạ, chưa tạo file thật.</p>
+</main>
+</body>
+</html>
